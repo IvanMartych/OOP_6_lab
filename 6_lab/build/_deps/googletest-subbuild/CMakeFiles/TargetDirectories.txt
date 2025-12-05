@@ -1,3 +1,0 @@
-C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir
-C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/_deps/googletest-subbuild/CMakeFiles/edit_cache.dir
-C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/_deps/googletest-subbuild/CMakeFiles/rebuild_cache.dir
