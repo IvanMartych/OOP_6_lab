@@ -38,8 +38,7 @@ void Arena::addNpc(std::unique_ptr<Npc> npc) {
 void Arena::createAndAddNpc(const std::string& type, 
                             const std::string& name, 
                             int x, int y) {
-    auto npc = NpcFactory::createNpc(type, name, x, y);
-    npcs_[name] = std::move(npc);
+    addNpc(NpcFactory::createNpc(type, name, x, y));
 }
 
 // вывод всех NPC, находящихся на арене

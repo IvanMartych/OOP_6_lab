@@ -3,17 +3,17 @@
 #include <string>
 #include "npc.h"
 
-// фабрика для создания NPC
+// фабричный класс npc
 class NpcFactory {
 public:
-    // создание NPC по типу
+    // парсинг из строки
+    static std::unique_ptr<Npc> createFromString(const std::string& line);
+    
+    // создание по параметрам
     static std::unique_ptr<Npc> createNpc(
         const std::string& type,
         const std::string& name,
         int x, 
         int y
     );
-    
-    // создание NPC из строки файла
-    static std::unique_ptr<Npc> createFromString(const std::string& line);
 };

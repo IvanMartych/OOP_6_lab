@@ -7,14 +7,22 @@
 Npc::Npc(int x, int y, const std::string& type, const std::string& name)
     : x_(x), y_(y), type_(type), name_(name) {}
 
-// реализация геттеров
-int Npc::getX() const { return x_; }
+// реализация геттеров для координат и свойств
+int Npc::getX() const { 
+    return x_; 
+}
 
-int Npc::getY() const { return y_; }
+int Npc::getY() const { 
+    return y_; 
+}
 
-std::string Npc::getType() const { return type_; }
+std::string Npc::getType() const { 
+    return type_; 
+}
 
-std::string Npc::getName() const { return name_; }
+std::string Npc::getName() const { 
+    return name_; 
+}
 
 // вычисление расстояния по теореме пифагора
 double Npc::distanceTo(const Npc& other) const {

@@ -43,30 +43,10 @@ target_link_libraries(${PROJECT_NAME}_exe PRIVATE ${PROJECT_NAME}_lib)
 # Добавление тестов
 enable_testing()
 
-# Тесты для NPC
-add_executable(${PROJECT_NAME}_test_npc tests/test_npc.cpp)
-target_link_libraries(${PROJECT_NAME}_test_npc PRIVATE ${PROJECT_NAME}_lib gtest_main)
-add_test(NAME Laboratory_6_test_npc COMMAND ${PROJECT_NAME}_test_npc)
-
-# Тесты для Factory
-add_executable(${PROJECT_NAME}_test_factory tests/test_factory.cpp)
-target_link_libraries(${PROJECT_NAME}_test_factory PRIVATE ${PROJECT_NAME}_lib gtest_main)
-add_test(NAME Laboratory_6_test_factory COMMAND ${PROJECT_NAME}_test_factory)
-
-# Тесты для Arena
-add_executable(${PROJECT_NAME}_test_arena tests/test_arena.cpp)
-target_link_libraries(${PROJECT_NAME}_test_arena PRIVATE ${PROJECT_NAME}_lib gtest_main)
-add_test(NAME Laboratory_6_test_arena COMMAND ${PROJECT_NAME}_test_arena)
-
-# Тесты для Combat
-add_executable(${PROJECT_NAME}_test_combat tests/test_combat.cpp)
-target_link_libraries(${PROJECT_NAME}_test_combat PRIVATE ${PROJECT_NAME}_lib gtest_main)
-add_test(NAME Laboratory_6_test_combat COMMAND ${PROJECT_NAME}_test_combat)
-
-# Тесты для загрузки файлов
-add_executable(${PROJECT_NAME}_test_file_loading tests/test_file_loading.cpp)
-target_link_libraries(${PROJECT_NAME}_test_file_loading PRIVATE ${PROJECT_NAME}_lib gtest_main)
-add_test(NAME Laboratory_6_test_file_loading COMMAND ${PROJECT_NAME}_test_file_loading)
+# Объединенные тесты
+add_executable(${PROJECT_NAME}_gtests tests/gtests.cpp)
+target_link_libraries(${PROJECT_NAME}_gtests PRIVATE ${PROJECT_NAME}_lib gtest_main)
+add_test(NAME 6_lab_tests COMMAND ${PROJECT_NAME}_gtests)
 
 # Копируем тестовые файлы в директорию сборки
 configure_file(

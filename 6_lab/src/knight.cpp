@@ -2,10 +2,13 @@
 #include "../include/visitor.h"
 #include <iostream>
 
-Knight::Knight(int x, int y, const std::string& name)
-    : Npc(x, y, type_, name) {}
-
 const std::string Knight::type_ = "Knight";
+
+Knight::Knight(int x, int y, const std::string& name)
+    : Npc(x, y, type_, name) 
+{
+    // конструктор странствующего рыцаря
+}
 
 void Knight::accept(Visitor& visitor) {
     visitor.visit(*this);
@@ -13,6 +16,6 @@ void Knight::accept(Visitor& visitor) {
 
 void Knight::printInfo() const {
     std::cout << "Wandering Knight: " << getName()
-              << " at coordinates (" << getX() << ", " << getY() << ")"
+              << " @ (" << getX() << ", " << getY() << ")"
               << std::endl;
 }

@@ -2,14 +2,14 @@
 #include <string>
 #include "npc.h"
 
-// класс пегаса - мирное существо, никого не атакует
+// пегас (мирный персонаж)
 class Pegasus : public Npc {
-public:
-    Pegasus(int x, int y, const std::string& name);
-
-    void accept(Visitor& visitor) override;
-    void printInfo() const override;
-
 private:
     static const std::string type_;
+
+public:
+    Pegasus(int x, int y, const std::string& name);
+    
+    void printInfo() const override;
+    void accept(Visitor& visitor) override;
 };

@@ -2,36 +2,34 @@
 #include <string>
 #include <memory>
 
-// предварительное объявление
 class Visitor;
 
-// базовый класс для всех NPC в игре
+// абстрактный класс персонажа
 class Npc {
+private:
+    int x_, y_;
+    std::string type_;
+    std::string name_;
+
 public:
     Npc(int x, int y, const std::string& type, const std::string& name);
     virtual ~Npc() = default;
 
-    // геттеры для свойств NPC
-    int getX() const;
-    int getY() const;
-    std::string getType() const;
-    std::string getName() const;
-
-    // вычисление евклидова расстояния до другого NPC
-    double distanceTo(const Npc& other) const;
-
-    // реализация паттерна посетитель
+    // печать данных персонажа
+    virtual void printInfo() const;
+    
+    // применение посетителя
     virtual void accept(Visitor& visitor) = 0;
 
-    // отображение информации об NPC
-    virtual void printInfo() const;
+    // получение расстояния до другого npc
+    double distanceTo(const Npc& other) const;
 
-    // перегрузка оператора вывода
+    // доступ к полям
+    std::string getName() const;
+    std::string getType() const;
+    int getX() const;
+    int getY() const;
+
+    // оператор вывода
     friend std::ostream& operator<<(std::ostream& os, const Npc& npc);
-
-private:
-    int x_;
-    int y_;
-    std::string type_;
-    std::string name_;
 };

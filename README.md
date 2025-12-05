@@ -84,12 +84,8 @@
 │ └── combat_visitor.cpp
 │
 └── tests/
-├── test_npc.cpp
-├── test_factory.cpp
-├── test_arena.cpp
-├── test_combat.cpp
-├── test_file_loading.cpp
-└── test_data_npcs.txt
+    ├── all_tests.cpp
+    └── test_data_npcs.txt
 ```
 
 ## Сборка и запуск проекта
@@ -120,13 +116,6 @@ cmake --build .
 # запуск всех тестов
 ctest --output-on-failure
 
-# или запуск отдельного теста
-ctest -R test_npc --verbose
-
-# прямой запуск исполняемых файлов тестов
-./6_lab_test_npc
-./6_lab_test_factory
-./6_lab_test_arena
-./6_lab_test_combat
-./6_lab_test_file_loading
+# прямой запуск исполняемого файла тестов
+./6_lab_all_tests
 ```

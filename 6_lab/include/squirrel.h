@@ -2,14 +2,14 @@
 #include <string>
 #include "npc.h"
 
-// класс белки - атакует пегасов
+// белка (нападает на пегасов)
 class Squirrel : public Npc {
-public:
-    Squirrel(int x, int y, const std::string& name);
-
-    void accept(Visitor& visitor) override;
-    void printInfo() const override;
-
 private:
     static const std::string type_;
+
+public:
+    Squirrel(int x, int y, const std::string& name);
+    
+    void printInfo() const override;
+    void accept(Visitor& visitor) override;
 };

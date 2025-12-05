@@ -1,0 +1,10 @@
+{
+	"InstallScripts" : 
+	[
+		"C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/cmake_install.cmake",
+		"C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/_deps/googletest-build/cmake_install.cmake",
+		"C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/_deps/googletest-build/googlemock/cmake_install.cmake",
+		"C:/MY_DIRECTORY/STUDING_MAI/3_sem/OOP_labs/OOP_6_lab/6_lab/build/_deps/googletest-build/googletest/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
